@@ -1,6 +1,4 @@
-﻿# Das Skript für "Mission: Himbeerkuchen"
-
-image bg company = im.Scale("images/MyQuestion/bgs/bg_company.png", 1920, 1080)
+﻿image bg company = im.Scale("images/MyQuestion/bgs/bg_company.png", 1920, 1080)
 image bg_office = im.Scale("images/MyQuestion/bgs/bg_office.png", 1920, 1080)
 image bg_office_desk = im.Scale("images/MyQuestion/bgs/bg_office_desk.png", 1920, 1080)
 image bg_office_path = im.Scale("images/MyQuestion/bgs/bg_office_path.png", 1920, 1080)
@@ -128,5 +126,4 @@ label start:
 
             m "Egal. Felix! Komm schnell her, du glaubst nicht, welche Opfer wir für diesen Snack bringen mussten..."
 
-            #TestingGit
             return
