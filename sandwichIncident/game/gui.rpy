@@ -2,6 +2,7 @@
 ## Initialization
 ################################################################################
 
+
 ## The init offset statement causes the initialization statements in this file
 ## to run before init statements in any other file.
 init offset = -2
@@ -13,7 +14,6 @@ init python:
 
 ## Enable checks for invalid or unstable properties in screens or transforms
 define config.check_conflicting_properties = True
-
 
 ################################################################################
 ## GUI Configuration Variables
@@ -87,9 +87,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
-
+define gui.main_menu_background = "gui/main_menu_company.png"
+define gui.game_menu_background = "gui/game_menu_company.png"
 
 ## Dialogue ####################################################################
 ##

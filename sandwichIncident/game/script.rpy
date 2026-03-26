@@ -42,12 +42,12 @@ label start:
 
     show matthäus_normal
 
-    m "Unsere Jobs? Es ist wohl eher ein strategische Akquise von Backwaren. Wer nicht wagt, der hungert. Bist du bereit für den Überfall auf die Snacks?"
+    m "Unsere Jobs? Es ist wohl eher ein strategische Akquise von Backwaren. Wer nicht wagt, der hungert. Bist du bereit für den Überfall auf die Brötchen?"
     
     show matthäus_happy
 
     scene bg_office_path
-    e "Mit einem großen Hunger schleichen sich beide ins Innovations Forum. Jeder einzelne.\Mit jedem weiterem Schritt wird der Hunger von Matthäus größer und größer."
+    e "Mit einem großen Hunger schleichen sich beide ins Innovationsforum. Mit jedem weiterem Schritt wird der Hunger von Matthäus größer und größer."
 
     scene bg_conference_room
     show matthäus_happy
@@ -58,9 +58,9 @@ label start:
         "Willst du wirklich zu einem Brötchen-Banditen werden?"
 
         "Nein, ich will nicht!":
-            show bg_office_path with fade 
-            e "Du entscheidest dich für die Sicherheit deines Schreibtisches."
-            return 
+            show bg_office_desk with fade 
+            e "Du entscheidest dich für die Sicherheit deines Schreibtisches und somit endet leider dein Abenteuer mit Matthäus..."
+            return
 
         "Ja, ich will zu einem Brötchen-Banditen werden":
             m "(flüstert Sabine zu)\n Wie ist die Lage an der Front? Wurden die Brötchen bereits gesichtet?"
@@ -115,13 +115,14 @@ label start:
 
             mc "Glaubst du der Chef hat uns bemerkt?"
 
-
-            hide matthäus_happy
             show bg_conference_room with fade
+            hide matthäus_happy
+
             #show gt_normal
             c "Albis...Warum ist es immer Albis?"
             #hide gt_normal
 
+            show bg_office_desk
             show matthäus_happy
 
             m "Egal. Felix! Komm schnell her, du glaubst nicht, welche Opfer wir für diesen Snack bringen mussten..."
