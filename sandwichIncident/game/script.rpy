@@ -34,17 +34,13 @@ label start:
 
     e "Alles klar, [player_name]. Schnall dich an. \nEs ist ein Dienstagmorgen wie jeder andere, aber für dich wird er unvergesslich..."
 
-    play music "singing_birds.wav"
-
     scene bg company
     with fade 
     scene bg company
     e "Ein strahlender Morgen bei Albis. Die Vögel singen von Reiners Schatz und Multithreading..."
     e "Doch im Schatten der Kaffeemaschine braut sich eine Katastrophe zusammen. Ein Mann. Ein Ziel. Ein unbändiger Hunger."
 
-    stop music fadeout 1.0
 
-    play music "background.wav"
     scene bg_office
     show matthäus_normal
 
@@ -60,16 +56,12 @@ label start:
     
     show matthäus_happy
 
-    stop music fadeout 1.0
-
-    play music "running.wav" volume 1.0
     scene bg_office_path
     e "Mit einem großen Hunger rennen beide ins Innovationsforum. Mit jedem weiterem Schritt wird der Hunger von Matthäus größer und größer."
     
     stop music fadeout 1.0
 
     scene bg_conference_room
-    play music "crowded_room.wav" volume 0.30
     show matthäus_happy
 
     m "Da ist es. Das gelobte Land von Backwaren. Sieh dir diese Brötchen an...\nSie glänzen im Licht der Deckenstrahler wie Diamanten."
