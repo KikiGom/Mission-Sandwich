@@ -15,7 +15,7 @@
 define config.name = _("{b}The Sandwitch Incident{/b}")
 
 
-## Determines if the title given above is shown on the main menu screen. Set
+## Determines if the title given above is sBuild Distributionshown on the main menu screen. Set
 ## this to False to hide the title.
 
 define gui.show_name = True

@@ -4,7 +4,7 @@ image bg_office_desk = im.Scale("images/MyQuestion/bgs/bg_office_desk.png", 1920
 image bg_office_path = im.Scale("images/MyQuestion/bgs/bg_office_path.png", 1920, 1080)
 image bg_conference_room = im.Scale("images/MyQuestion/bgs/bg_conference_room.png", 1920, 1080)
 image bg_smoking_area_with_hand = im.Scale("images/MyQuestion/bgs/bg_smoking_area_with_hand.png", 1920, 1080)
-image bg_smoking_area_without_hand = im.Scale("images/MyQuestion/bgs/bg_smoking_area_without_hand.png", 1920, 1080)
+image bg_smoking_area_without_hand  = im.Scale("images/MyQuestion/bgs/bg_smoking_area_without_hand.png", 1920, 1080)
 image bg_cafeteria = im.Scale("images/MyQuestion/bgs/bg_cafeteria.png", 1920, 1080)
 
 
@@ -246,7 +246,7 @@ label start:
                     scene bg_cafeteria
 
                     show jte_normal
-                    jte "Diggah, guck dir diesen Glanz an... heute gibt es wieder Currywurst und Pommes."
+                    jte "Diggah, guck dir diesen Glanz an... heute gibt es wieder Currywurst mit Pommes."
 
                     hide jte_normal
 
@@ -257,7 +257,7 @@ label start:
                     e "Joshua und JTE stürzen sich auf ihr Essen, als hätten sie seit dem letzten Firmenjubiläum nichts mehr bekommen."
 
                     show joshua_normal
-                    jw "(mit vollem Mund) Habt ihr eigentlich die E-Mail gelesen?"
+                    jw "(Mit vollem Mund) Habt ihr eigentlich die E-Mail gelesen?"
 
                     mc "Welche Email? Mein Postfach quillt nur über vor Jira-Tickets."
 
@@ -279,7 +279,7 @@ label start:
             e "20 Minuten später. Die Bäuche sind voll, die Welt ist wieder in Ordnung. Von Liebeskummer bis hin zur legendären Berlin-Fahrt wird über jedes Thema gesprochen."
 
             scene bg_office_path with fade
-            e "Die Mittagspause neigt sich dem Ende zu. Die Gruppe schlendert träge zurück in Richtung Büro... zumindest theoretisch."
+            e "Die Mittagspause neigt sich dem Ende zu. Die Gruppe schlendert träge zurück in Richtung Büro..."
 
             show joshua_happy
 
@@ -332,6 +332,54 @@ label start:
                             mc "JTE, nein! Erstens ist das illegal und zweitens hast du nicht mal eine Küche!"
 
                             hide jte_happy
-                "Ich will nicht rauchen.":
-
                             return
+
+                "Nein, ich will nicht noch eine rauchen.":
+                    show bg_office_desk with fade 
+                    e "Du entscheidest dich zurück an deinen Schreibtisch zu gehen, um dich auf die nächste Besprechung vorzubereiten. Manchmal ist es besser, nicht alles zu wissen..."
+
+                    e "Du bist gerade dabei die TI einzurichten, als plötzlich eine E-Mail in deinem Posteingang landet."
+
+                    e "Betreff: Azubi Feier: Eine Einlaung Volleyball zu spielen und Cocktails zu trinken. Du bemekerst im Angang ein Video und schaust es dir an."
+
+                    e "Du schaust überracht und rufst die Azubis JTE und Joshua zu dir an den Schreibtisch, um das Video zu zeigen."
+
+                    mc "Sieht ihr auch das was ich sehe, sagte ich stotternd, als das Video startet."
+
+                    show jw_normal at right
+
+                    jw "(schaut das Video und fängt an zu lachen) Oh mein Gott, wie unangenem..."
+
+                    show jte_normal at left
+
+                    jte "Und dafür werden die bezahlt?"
+
+                    e "Ihr schaut euch alle gegenseitig an und fängt an zu lachen."
+
+                    jw "Ich muss dieses Video irgenwie verarbeiten. Vielleicht ein Monster Energy, um den meinen in den Augen zu heilen."
+
+                    hide jw_normal
+                    hide jte_normal
+                     
+                    return
+
+            e "Jeder geht zurück auf seinen Arbeitsplatz und arbeitet an den Tickest weiter."
+
+            scene bg_office_desk 
+
+            e "Der Abreitstag vergeht wie im Flug und alle machen sich nach Hause."
+
+            scene bg_office_desk with fade
+
+            #e "Ein Neuer Tag im Büro Die Vögel zwitchern, die Kühlschränke befüllt mit belegten Brötchen."
+            #e "[mc] setzt sich an seinen Schreibtsich und genießt die Ruhe am morgen bevor alle Mitarbeiter eintreffen."
+            #e "30 Minuten vergehen und du bist fast mit deinem Ticket fertig."
+
+            #e "[mc] hört laute Musik und schaut aus dem Fenster."
+            #mc "Joshua kam gerade an und sucht sich ein Parkplatz."
+
+       
+
+
+
+                    
