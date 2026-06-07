@@ -1,0 +1,36 @@
+name: RenPy Automatischer Build
+
+on:
+  push:
+    branches:
+      - main  # Startet den Build jedes Mal, wenn du auf den "main"-Branch pushst
+
+jobs:
+  build-game:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Holt deinen Code aus dem Repository
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      # 2. Installiert das Ren'Py SDK auf dem Server
+      - name: Ren'Py installieren
+        uses: PaxlavaGames/renpy-install@v0.3.0
+        with:
+          version: "8.2.1"  # <-- HIER DEINE RENPY-VERSION EINTRAGEN!
+
+      # 3. Baut die fertigen Versionen (Windows, Linux, Mac)
+      - name: Spiel kompilieren
+        uses: PaxlavaGames/renpy-build@v0.3.0
+        with:
+          path: "."  # Punkt bedeutet, das Projekt liegt direkt im Hauptordner
+
+      # 4. Lädt das fertige Zip-Paket auf GitHub hoch
+      - name: Build als Download bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mein-Renpy-Spiel-Build
+          path: |
+            **/*-dists.zip
+            **/*-market.zip
